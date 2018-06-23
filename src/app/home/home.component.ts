@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { SidebarComponent } from '../sidebar/sidebar.component';
 
 @Component({
   selector: 'app-home',
@@ -7,14 +6,14 @@ import { SidebarComponent } from '../sidebar/sidebar.component';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  @ViewChild(SidebarComponent) sidebarData:SidebarComponent ;
+
   private studData: any;
   constructor() { }
 
   ngOnInit() {
   }
 
-  stdData(studData:any){
+  stdData(studData: any) {
     this.studData = studData;
   }
 

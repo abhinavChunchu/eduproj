@@ -1,8 +1,16 @@
-<div class="sidebar-sticky">
-    <h3 class="side-title">Course</h3>
-    <ul class="nav flex-column" *ngFor="let course of courseList">
-        <li class="nav-item" (click)="onclick(course)">
-            <span>{{course.courseName}}</span>
-        </li>
-    </ul>
+<div class="container-fluid">
+    <div class="row">
+        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
+            <div class="sidebar-sticky">
+                <h3 class="side-title">Course</h3>
+                <ul class="nav flex-column" *ngFor="let course of courseList">
+                    <p-accordion>
+                        <p-accordionTab [header]="{{course.courseName}}">
+                            Content 1
+                        </p-accordionTab>
+                    </p-accordion>
+                </ul>
+            </div>
+        </nav>
+    </div>
 </div>

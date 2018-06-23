@@ -1,8 +1,0 @@
-<div class="container-fluid">
-    <div class="row">
-        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
-          <app-courses *ngIf="hideCourse" (course)="getCours($event)"></app-courses>
-          <app-student *ngIf="!hideCourse" [courseStudents]="course" (studentdata)="studentData($event)" (courseHide)="sethideCourse($event)" ></app-student>
-        </nav>
-    </div>
-</div>
