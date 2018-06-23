@@ -1,0 +1,44 @@
+  "courses": [
+    {
+      "courseId": "OSIRIS:445565664",
+      "courseName": "MTH/509",
+      "courseEndDate": "2018-07-22",
+      "courseStartDate": "2018-04-22"
+    },
+    {
+      "courseId": "OSIRIS:897787877",
+      "courseName": "SCI/877",
+      "courseEndDate": "2018-07-23",
+      "courseStartDate": "2018-04-30"
+    }
+  ]
+}
+/api/course/{courseId}/students
+listOfStudents(String courseId)
+return
+{
+  "students": [
+    {
+      "profileId": "12345eereds",
+      "studentName" :"Jack NickleSon",
+      "imgSrc" : ""
+    },
+    {
+      "profileId": "78773njkhcg",
+      "studentName" :"Will Smith",
+      "imgSrc" : ""
+    }
+  ]
+}
+/api/course/{courseId}/engagementScore
+getEnagementScore(String courseId)
+Return 
+{
+  "scores": [
+    {
+      "profileId": "12345eereds",
+      "engagementScore": 0.5,
+      "engagementLevel": "L",
+      "gradePoints": 70.5,
+      "gradeLevel": "M"
+    },

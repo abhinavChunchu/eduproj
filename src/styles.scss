@@ -1,0 +1,162 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+    box-shadow: 0 0 1px 1px rgba(19, 22, 26, 0.1), 0 3px 1px 0 rgba(20,23,28,.1);
+    margin: auto;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: #f8f9fa;
+    text-align: center;
+  }
+  .main {
+    margin-left: 260px;
+    font-size: 28px;
+    padding: 0px 10px;
+    width: 50%;
+    height: 50%;
+    border: 1px solid gray;
+    margin-top: 75px;
+
+}
+.fixed-top{
+  background-color: #f8f9fa;
+  box-shadow: 0 0 1px 1px rgba(20,23,28,.1), 0 3px 1px 0 rgba(20,23,28,.1);
+}
+.header-title{
+  padding: 5px;
+}
+ 
+.feather {
+  width: 16px;
+  height: 16px;
+  vertical-align: text-bottom;
+}
+
+.sidebar {
+  position: fixed;
+  top: 30px;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  padding: 48px 0 0;
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+}
+
+.sidebar-sticky {
+  position: relative;
+  top: 0;
+  height: calc(100vh - 48px);
+  padding-top: .5rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+@supports ((position: -webkit-sticky) or (position: sticky)) {
+  .sidebar-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    font-size: 1.24rem;
+  }
+}
+
+.sidebar .nav-link {
+  font-weight: 500;
+  color: #333;
+}
+
+.sidebar .nav-link .feather {
+  margin-right: 4px;
+  color: #999;
+
+}
+
+.sidebar .nav-link.active {
+  color:black;
+  background: lightgray;
+  &hover{
+    background: white;
+  }
+}
+
+.sidebar .nav-link:hover .feather,
+.sidebar .nav-link.active .feather {
+  color: inherit;
+}
+
+.sidebar-heading {
+  font-size: .75rem;
+  text-transform: uppercase;
+}
+
+[role="main"] {
+  padding-top: 60px; /* Space for fixed navbar */
+}
+
+.navbar-brand {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  font-size: 1.25rem;
+  background-color: rgba(0, 0, 0, .25);
+  box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
+}
+
+.navbar .form-control {
+  padding: .75rem 1rem;
+  border-width: 0;
+  border-radius: 0;
+  height: 50px;
+}
+
+.form-control-dark {
+  color: #fff;
+  background-color: rgba(255, 255, 255, .1);
+  border-color: rgba(255, 255, 255, .1);
+}
+
+.form-control-dark:focus {
+  border-color: transparent;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+}
+
+.border-top { border-top: 1px solid #e5e5e5; }
+.border-bottom { border-bottom: 1px solid #e5e5e5; }
+
+.sidenav {
+  height: 80%;
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  background-color: #f8f9fa;
+  overflow-x: hidden;
+  padding: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  background: lightgray;
+}
+
+.side-title{
+  font-size: 1.75rem;
+  background: lightsteelblue;
+  text-align: center;
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 2px 5px 15px grey;
+  margin-bottom: 10px;
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}

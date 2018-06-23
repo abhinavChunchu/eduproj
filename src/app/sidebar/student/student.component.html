@@ -1,0 +1,11 @@
+<div class="sidebar-sticky">
+    <h3 class="side-title">Students</h3>
+    <ul class="nav flex-column" *ngFor="let student of courseStudents">
+        <li class="nav-item" (click)="onclick(student)">
+            <span>{{student.studentName}}</span>
+        </li>
+    </ul>
+    <div class="back-button">
+        <button class="btn btn-primary" (click)="goBack(true)">&lt;Back</button>
+    </div>
+</div>

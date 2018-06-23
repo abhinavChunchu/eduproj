@@ -1,0 +1,6 @@
+<div class="container-fluid no-gutters">
+    <app-header></app-header>
+    <app-sidebar (studData)="stdData($data)"></app-sidebar>
+    <app-main [data]="sidebarData"></app-main>
+    <app-footer></app-footer>
+  </div>

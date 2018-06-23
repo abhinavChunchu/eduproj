@@ -1,0 +1,8 @@
+<div class="sidebar-sticky">
+    <h3 class="side-title">Course</h3>
+    <ul class="nav flex-column" *ngFor="let course of courseList">
+        <li class="nav-item" (click)="onclick(course)">
+            <span>{{course.courseName}}</span>
+        </li>
+    </ul>
+</div>
