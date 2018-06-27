@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -6,15 +6,13 @@ import { Component, OnInit, ViewChild } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
-  private studData: any;
+  @Output() private studData: any;
   constructor() { }
 
   ngOnInit() {
   }
 
-  stdData(studData: any) {
-    this.studData = studData;
+  studentDetails(student) {
+    this.studData = student;
   }
-
 }

@@ -1,5 +1,4 @@
 .footer {
-    position: fixed;
     bottom: 0;
     box-shadow: 0 0 1px 1px rgba(19, 22, 26, 0.1), 0 3px 1px 0 rgba(20,23,28,.1);
     margin: auto;
@@ -10,7 +9,7 @@
     text-align: center;
   }
   .main {
-    margin-left: 260px;
+    margin-left: 360px;
     font-size: 28px;
     padding: 0px 10px;
     width: 50%;
@@ -20,10 +19,9 @@
 
 }
 .fixed-top{
-  background-color:	#800000 !important;
+  background: #800000 !important;
   box-shadow: 0 0 1px 1px rgba(20,23,28,.1), 0 3px 1px 0 rgba(20,23,28,.1);
 }
-
 .header-title{
   padding: 5px;
 }
@@ -32,6 +30,9 @@
   width: 16px;
   height: 16px;
   vertical-align: text-bottom;
+}
+.container-fluid{
+  padding: 0px;
 }
 
 .sidebar {
@@ -42,6 +43,7 @@
   z-index: 100;
   padding: 48px 0 0;
   box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+  overflow: scroll;
 }
 
 .sidebar-sticky {
@@ -148,12 +150,15 @@
 
 .side-title{
   font-size: 1.75rem;
-  background: lightsteelblue;
+  background: lightgray;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 3px;
   padding: 5px;
   box-shadow: 2px 5px 15px grey;
   margin-bottom: 10px;
+}
+.ui-accordion .ui-accordion-content{
+  padding: 0px !important;
 }
 
 

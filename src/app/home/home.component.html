@@ -1,6 +1,6 @@
-<div class="container-fluid no-gutters">
+<div class="container-fluid">
     <app-header></app-header>
-    <app-courses></app-courses>
-    <app-main [data]="sidebarData"></app-main>
+    <app-main [studentData]="studData"></app-main>
+    <app-courses (student)="studentDetails($event)"></app-courses>
     <app-footer></app-footer>
   </div>

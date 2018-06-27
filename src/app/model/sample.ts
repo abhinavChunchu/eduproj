@@ -1,12 +1,12 @@
-export class SampleService {
+export class SampleService{
 
-    private dataStore: any ;
+    private dataStore:any ;
 
-    set setData(data) {
+    set setData(data){
         this.dataStore = data;
     }
 
-    get getdata() {
+    get getdata(){
         return this.dataStore;
     }
 }

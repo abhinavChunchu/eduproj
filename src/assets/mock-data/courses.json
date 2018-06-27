@@ -1,0 +1,39 @@
+[
+    {
+        "courseId": "OSIRIS:445565664",
+        "courseName": "MTH/509",
+        "courseEndDate": "2018-07-22",
+        "courseStartDate": "2018-04-22"
+      },
+
+          {
+        "courseId": "OSIRIS:897787877",
+        "courseName": "SCI/877",
+        "courseEndDate": "2018-07-23",
+        "courseStartDate": "2018-04-30"
+      },
+      {
+        "courseId": "OSIRIS:12",
+        "courseName": "PHY/211",
+        "courseEndDate": "2018-07-22",
+        "courseStartDate": "2018-04-22"
+      },
+      {
+        "courseId": "OSIRIS:13",
+        "courseName": "SCO/125",
+        "courseEndDate": "2018-07-23",
+        "courseStartDate": "2018-04-30"
+      },
+      {
+        "courseId": "OSIRIS:14",
+        "courseName": "MTH/509",
+        "courseEndDate": "2018-07-22",
+        "courseStartDate": "2018-04-22"
+      },
+      {
+        "courseId": "OSIRIS:15",
+        "courseName": "SCI/877",
+        "courseEndDate": "2018-07-23",
+        "courseStartDate": "2018-04-30"
+      }
+    ]

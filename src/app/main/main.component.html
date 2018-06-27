@@ -1,7 +1,9 @@
 <div class="container-fluid">
-  <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+  <main role="main" class="col-md-9 ml-sm-auto col-lg-9 px-4">
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-      <h1 class="h2">Dashboard</h1>
+      <h1 class="h2">Faculty Report
+      <img class="image-align" [src]="imagePath" width="30px" height="30px" alt="image" >
+    </h1>
       <div class="btn-toolbar mb-2 mb-md-0">
         <div class="btn-group mr-2">
           <button class="btn btn-sm btn-outline-secondary">Share</button>
@@ -13,41 +15,21 @@
         </button>
       </div>
     </div>
-    <div *ngIf="data.studData === undefined" class="card" style="width: 30rem; height: 20rem">
-      <div class="card-body">
-          <h5 class="card-title">This is some text within a dashboard</h5>
-          <div class="card-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos odio quae voluptatibus tempora. Deleniti numquam non asperiores animi fugiat aspernatur mollitia reprehenderit distinctio ad voluptate. Inventore, quae. Cupiditate, debitis ipsam!
-          </div>  
-        </div>
+    <div class="card" style="width: 30rem; height: 20rem">
+        <p-chart type="line" [data]="data"></p-chart>
       </div>
-    <div *ngIf="data.studData" class="card" style="width: 30rem;">
-      <img class="card-img-top" src="">
-      <div class="card-body">
-        <h5 class="card-title">Student Details</h5>
-        <div class="table-responsive">
-          <table class="table table-striped table-sm">
-            <thead>
-              <tr>
-                <th>{{data.studData.studentName}}</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>{{data.studData.profileId}}</td>
-              </tr>
-              <tr>
-                <td>Imgsrc</td>
-              </tr>
-              <tr>
-                <td>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa modi numquam quia, tempora magni voluptatibus
-                  consequuntur cumque perspiciatis totam ex ipsum doloremque natus illo. Ex quos ullam delectus laudantium?
-                  Ipsum.</td>
-              </tr>
-            </tbody>
-          </table>
+      <div *ngIf="studentData"><hr>
+        <h1 class="h2">Student Report
+          <img class="image-align" [src]="report" width="30px" height="30px" alt="image" >
+        </h1>
+          <div class="card" style="width: 30rem; height: 20rem">
+            <div class="card-body">
+              <h5 class="card-title">{{studentData.studentName}}</h5>
+              <div class="card-text">
+                {{studentData.profileId}} Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto nemo itaque alias sunt at placeat reprehenderit repellat ipsa commodi dolores a facere recusandae, cum voluptas suscipit quibusdam molestiae voluptate omnis.
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
   </main>
 </div>

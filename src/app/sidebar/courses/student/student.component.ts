@@ -9,8 +9,17 @@ import { Router } from '@angular/router';
 export class StudentComponent implements OnInit {
 
   @Input() public courseStudents: any;
+  @Output() courseHide = new EventEmitter<boolean>();
+  @Output() studentdata = new EventEmitter<any>();
   constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  goBack(event: any) {
+    this.courseHide.emit(event);
+  }
+  onclick(student: any) {
+    this.studentdata.emit(student);
   }
 }

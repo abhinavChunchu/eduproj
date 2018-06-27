@@ -1,16 +1,23 @@
-<div class="container-fluid">
-    <div class="row">
-        <nav class="col-md-2 d-none d-md-block bg-light sidebar">
-            <div class="sidebar-sticky">
+<div class="sidebar-sticky">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 d-none d-md-block bg-light sidebar">
                 <h3 class="side-title">Course</h3>
-                <ul class="nav flex-column" *ngFor="let course of courseList">
-                    <p-accordion>
-                        <p-accordionTab [header]="{{course.courseName}}">
-                            Content 1
+                <div class="nav flex-column" *ngFor="let course of courseList">
+                    <p-accordion (onClose)="onTabClose(course)" (onOpen)="onTabOpen(course)">
+                        <p-accordionTab [header]="course.courseName">
+                            <div *ngIf="studentList1" class="">
+                                <ul class="nav flex-column" *ngFor="let student of studentList1">
+                                    <li class="nav-item" (click)="studentDetails(student)">
+                                        <span>{{student.studentName}}</span>
+                                        <img class="studentImage" [src]="imagePath" width="30px" height="30px" alt="image" >
+                                    </li>
+                                </ul>
+                            </div>
                         </p-accordionTab>
                     </p-accordion>
-                </ul>
+                </div>
             </div>
-        </nav>
+        </div>
     </div>
 </div>
