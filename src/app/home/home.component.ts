@@ -6,7 +6,7 @@ import { Component, OnInit, ViewChild, Input, Output } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  @Output() private studData: any;
+  @Output() private studData: any[];
   constructor() { }
 
   ngOnInit() {

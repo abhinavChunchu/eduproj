@@ -1,11 +1,29 @@
-<div class="sidebar-sticky">
-    <h3 class="side-title">Students</h3>
-    <ul class="nav flex-column" *ngFor="let student of courseStudents">
-        <li class="nav-item" (click)="onclick(student)">
-            <span>{{student.studentName}}</span>
-        </li>
-    </ul>
-    <div class="back-button">
-        <button class="btn btn-primary" (click)="goBack(true)">&lt;Back</button>
-    </div>
-</div>
+<table class="table table-hover table-responsive-md">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th class="th-lg"><i class="fa fa-leaf fa-lg pr-2" aria-hidden="true"></i>First Name</th>
+            <th class="th-lg"><i class="fa fa-lock fa-lg pr-2" aria-hidden="true"></i>Last Name</th>
+            <th class="th-lg"><i class="fa fa-magic fa-lg pr-2" aria-hidden="true"></i>Username</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td><i class="fa fa-cloud pr-2" aria-hidden="true"></i>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td><i class="fa fa-coffee pr-2" aria-hidden="true"></i>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+        </tr>
+        <tr>
+            <th scope="row">3</th>
+            <td colspan="2"><i class="fa fa-send pr-2" aria-hidden="true"></i>Larry the Bird</td>
+            <td>@twitter</td>
+        </tr>
+    </tbody>
+</table>

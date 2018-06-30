@@ -1,35 +1,52 @@
 <div class="container-fluid">
-  <main role="main" class="col-md-9 ml-sm-auto col-lg-9 px-4">
-    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-      <h1 class="h2">Faculty Report
-      <img class="image-align" [src]="imagePath" width="30px" height="30px" alt="image" >
-    </h1>
-      <div class="btn-toolbar mb-2 mb-md-0">
-        <div class="btn-group mr-2">
-          <button class="btn btn-sm btn-outline-secondary">Share</button>
-          <button class="btn btn-sm btn-outline-secondary">Export</button>
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-9 px-4">
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+            <h1 class="h5">Faculty Report
+                <img class="image-align" [src]="imagePath" width="30px" height="30px" alt="image">
+            </h1>
         </div>
-        <button class="btn btn-sm btn-outline-secondary dropdown-toggle">
-          <span data-feather="calendar"></span>
-          This week
-        </button>
-      </div>
-    </div>
-    <div class="card" style="width: 30rem; height: 20rem">
-        <p-chart type="line" [data]="data"></p-chart>
-      </div>
-      <div *ngIf="studentData"><hr>
-        <h1 class="h2">Student Report
-          <img class="image-align" [src]="report" width="30px" height="30px" alt="image" >
-        </h1>
-          <div class="card" style="width: 30rem; height: 20rem">
-            <div class="card-body">
-              <h5 class="card-title">{{studentData.studentName}}</h5>
-              <div class="card-text">
-                {{studentData.profileId}} Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto nemo itaque alias sunt at placeat reprehenderit repellat ipsa commodi dolores a facere recusandae, cum voluptas suscipit quibusdam molestiae voluptate omnis.
-              </div>
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Faculty</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Reports</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active pt-4" id="home" role="tabpanel" aria-labelledby="home-tab">
+                <div class="card" style="width: 30rem; height: 20rem">
+                    <p-chart type="line" [data]="data"></p-chart>
+                </div>
             </div>
-          </div>
+            <div class="tab-pane fade pt-4" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <div class="card" style="width: 30rem; height: 20rem">
+                    <p-chart type="bar" [data]="data"></p-chart>
+                </div>
+            </div>
         </div>
-  </main>
+        <div *ngIf="studentData" class="pt-2">
+            <h1 class="h5 pt-3 bottom-border">Student Report
+                <img class="image-align" [src]="imagePath" width="30px" height="30px" alt="image">
+            </h1>
+            <table class="table table-bordered table-striped">
+                <thead class="thead-light">
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>NRI</th>
+                        <th>View Details</th>
+                    </tr>
+                </thead>
+                <tbody *ngFor="let student of studentData;let i=index">
+                    <tr>
+                        <th scope="row">{{i+1}}</th>
+                        <td>{{student.studentName}}</td>
+                        <td>{{student.profileId}}</td>
+                        <td class="link">View Reports</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
 </div>

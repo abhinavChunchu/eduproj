@@ -11,7 +11,7 @@ export class MainComponent implements OnInit {
 
   @ViewChild(CoursesComponent) private studentDetails: CoursesComponent;
 
-  @Input() private studentData: any;
+  @Input() private studentData: any[];
   private imagePath = '../../../assets/images/chart.svg';
   private report = '../../../assets/images/report.svg';
   private data: any;
@@ -19,7 +19,7 @@ export class MainComponent implements OnInit {
 
   ngOnInit() {
     this.commonService.getFacultyChart().subscribe(res => this.data = res);
-    console.log(this.data);
+    console.log(this.studentData);
   }
 
 

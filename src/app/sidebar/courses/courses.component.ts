@@ -1,6 +1,6 @@
 import { CommonService } from './../../model/common-service';
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import {Observable} from 'rxjs';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-courses',
@@ -16,20 +16,27 @@ export class CoursesComponent implements OnInit {
   constructor(private commonService: CommonService) { }
 
   ngOnInit() {
-    this.commonService.getCourses().subscribe(res  => this.courseList = res, error => console.log(error));
+    this.commonService.getCourses().subscribe(res => this.courseList = res, error => console.log(error));
   }
   studentDetails(student: any) {
-    console.log(student);
-    this.student.emit(student);
+    this.student.emit(this.studentList1);
   }
 
   getStudents(course: any) {
-    this.commonService.getStudents(course.courseName).subscribe(res  => this.studentList1 = res);
-  }
-  onTabOpen(data: any) {
-    this.getStudents(data);
-  }
-  onTabClose(course) {
+    console.log(course);
+    this.commonService.getStudents(course.courseName).subscribe(res => {
+      if (res) {
+        this.studentList1 = res;
+      }
+      if (this.studentList1) {
+        this.student.emit(this.studentList1);
+      }
+    });
 
   }
+
+  showCourse(course: any) {
+    return ' (' + course.courseStartDate + '-' + course.courseEndDate + ') ';
+  }
+
 }
